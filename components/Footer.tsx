@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Footer() {
     return (
       <>
-        <footer className="px-10 py-14 flex justify-around flex-wrap">
+        <footer className="px-10 py-14 gap-7 flex justify-around flex-wrap">
           <div>
             <h1 className="text-3xl">Logo</h1>
             <span>For new information, you can follow us on</span>
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
         </footer>
-        <p className="text-center">&copy;2024 Company. All Rights Reserved</p>
+        <p className="text-center py-10">&copy;2024 Company. All Rights Reserved</p>
       </>
     )
   }
