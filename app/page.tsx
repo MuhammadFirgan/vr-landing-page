@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { orbitron } from "./fonts";
+import Card from "@/components/Card";
+
 
 
 export default function Home() {
@@ -11,9 +13,9 @@ export default function Home() {
           <p className="my-10 sm:my-7 lg:mt-4 lg:mb-16">Embracing change, pioneering new digital frontiers, shaping tomorrow, redefining industries, empowering individuals in an ever-evolving tech era.</p>
           <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:bg-gradient-to-r hover:from-blue-900 hover:to-violet-900">Explore Now</button>
         </div>
-        <Image src="/img/1.png" width={750} height={750} alt="Hero Image" className="drop-shadow-2xl" />
+        <Image src="/img/1.png" width={750} height={750} alt="Hero Image" quality={100} priority className="drop-shadow-2xl" />
       </div>
-      <div className="my-40 flex flex-col gap-10 items-center lg:flex-row">
+      <div className="lg:py-10 my-40 flex flex-col gap-10 items-center lg:flex-row">
         <div className="flex gap-3 flex-col sm:flex-row sm:justify-center">
           <Image src="/img/2.png" width={300} height={300} alt="imgAbout 1"/>
           <div className="flex flex-col gap-3">
@@ -31,6 +33,25 @@ export default function Home() {
             <button className="px-4 py-3 border-2 border-white text-white hover:border-none border-transparent hover:bg-gradient-to-r hover:from-blue-900 hover:to-violet-900 sm:px-8">Explore Now</button>
           </div>
         </div>
+      </div>
+      <div className="lg:py-10 my-20">
+        <h1 className={`text-4xl ${orbitron.className}`}><span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-violet-500 font-bold">Top</span> Product</h1>
+        <div className="flex flex-wrap justify-center items-center gap-3">
+          <Card name="Valve Index" price="999" img="/img/5.png" />
+          <Card name="Pico Neo 2" price="699" img="/img/6.png" />
+          <Card name="Oculus Quest 2" price="299" img="/img/7.png" />
+          <Card name="HTC Vive Cosmos" price="699" img="/img/8.png" />
+        </div>
+        <div className="bg-gradient-to-r from-blue-500 to-violet-500 py-24 my-40 text-center rounded-2xl flex flex-col items-center gap-5">
+          <h1 className={`${orbitron.className} text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-900 to-violet-900 font-bold`}>Subscribe</h1>
+          <span>For New Future and New Technology</span>
+          <div className="flex w-full justify-center">
+
+            <input type="text" className="py-3 px-5 text-black max-w-40 w-full sm:max-w-lg lg:max-w-3xl" />
+            <button className="py-3 px-5 bg-gradient-to-r from-blue-900 to-violet-900">Subscribe</button>
+          </div>
+        </div>
+        
       </div>
     </main>
   );
